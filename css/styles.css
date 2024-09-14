@@ -11395,12 +11395,14 @@ p.lead {
   border-radius: 100%;
   font-size: 1.5rem;
   margin-right: 1.5rem;
+  transition: background-image 0.3s ease, opacity 0.3s ease;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
   background-image: linear-gradient(to bottom right, #f5143d, #630113);
+  opacity: 0.7;
 }
 
 .dev-icons {
