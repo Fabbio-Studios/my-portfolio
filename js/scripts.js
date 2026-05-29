@@ -8,8 +8,8 @@ let currentX = 0;
 let currentY = 0;
 
 document.addEventListener('mousemove', (e) => {
-  mouseX = (e.clientX / window.innerWidth - 0.5) * 40;
-  mouseY = (e.clientY / window.innerHeight - 0.5) * 40;
+  mouseX = (e.clientX / window.innerWidth - 0.5) * 50;
+  mouseY = (e.clientY / window.innerHeight - 0.5) * 50;
 });
 
 function animateGrid() {
