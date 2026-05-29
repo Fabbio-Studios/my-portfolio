@@ -7,6 +7,48 @@
   scroll-behavior: smooth;
   list-style: none;
 }
+
+body {
+  min-height: 100vh;
+  background: #f9f6ee;
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.background-grid {
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  opacity: 0.068;
+  background-image:
+    linear-gradient(#1f1f1f 2px, transparent 2px),
+    linear-gradient(90deg, #1f1f1f 2px, transparent 2px);
+  background-size: 80px 80px;
+  --mouseX: 0px;
+  --mouseY: 0px;
+  animation: gridMove 6s linear infinite;
+  will-change: background-position, transform;
+  transform: translate(calc(var(--mouseX) * 1), calc(var(--mouseY) * 1)) rotate(-12deg);
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+}
+
 header {
   position: fixed;
   top: 1rem;
