@@ -18,7 +18,7 @@ header {
   gap: 5rem;
   background-color: rgb(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
-  color: white;
+  color: #f9f6ee;
   padding: 0.5rem 1.5rem;
   border-radius: 3rem;
   z-index: 1000;
@@ -28,7 +28,7 @@ header {
   gap: 2rem;
 }
 .logo {
-  color: white;
+  color: #f9f6ee;
   font-size: 1.5rem;
   font-weight: 600;
   text-wrap: nowrap;
@@ -40,7 +40,7 @@ header {
 }
 li a {
   position: relative;
-  color: white;
+  color: #f9f6ee;
   font-weight: 300;
 }
 li a::before {
@@ -63,7 +63,7 @@ li a:hover::before {
   border: none;
   font-weight: 500;
   font-size: 1rem;
-  color: white;
+  color: #f9f6ee;
   cursor: pointer;
   text-wrap: nowrap;
   transition: 0.3s ease-in-out;
@@ -131,14 +131,14 @@ section {
 .btn {
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
-  border: 2px solid black;
+  border: 2px solid #1f1f1f;
   font-weight: 500;
   text-wrap: nowrap;
   transition: 0.2s ease-in-out;
 }
 .btn:hover {
-  background-color: black;
-  color: white;
+  background-color: #1f1f1f;
+  color: #f9f6ee;
 }
 .social {
   display: flex;
@@ -177,7 +177,7 @@ section {
   gap: 2rem;
 }
 .grid-card {
-  border: 2px solid black;
+  border: 2px solid #1f1f1f;
   border-radius: 3rem;
   padding: 2rem;
   display: flex;
@@ -189,8 +189,8 @@ section {
 }
 .grid-card:hover {
   transform: scale(1.02);
-  background-color: black;
-  color: white;
+  background-color: #1f1f1f;
+  color: #f9f6ee;
 }
 
 .grid-card i {
@@ -229,14 +229,14 @@ section {
   justify-content: center;
   text-align: center;
   gap: 1.5rem;
-  border: 2px solid black;
+  border: 2px solid #1f1f1f;
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .project-card:hover {
-  background-color: black;
-  color: white;
+  background-color: #1f1f1f;
+  color: #f9f6ee;
   transform: translateY(-10px)scale(1.02);
 }
 .project-card img {
@@ -244,13 +244,13 @@ section {
   border-radius: 1rem;
 }
 .project-card:hover .btn {
-  border: 2px solid white;
-  color :white;
+  border: 2px solid #f9f6ee;
+  color: #f9f6ee;
 }
 .project-card:hover .btn:hover {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
+  border: 2px solid #f9f6ee;
+  background-color: #f9f6ee;
+  color: #1f1f1f;
 }
 .project-card h3 {
   font-size: 2rem;
@@ -274,7 +274,7 @@ footer ul {
   gap: 3rem;
 }
 footer ul li a {
-  color: black;
+  color: #1f1f1f;
   font-weight: 600;
 }
 .copyright {
@@ -324,7 +324,7 @@ footer ul li a {
     margin-top: 1rem;
     width: 100%;
     padding: 1rem;
-    color: white;
+    color: #f9f6ee;
     display: none;
     flex-direction: column;
     text-align: center;
