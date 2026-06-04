@@ -182,6 +182,14 @@ li a:hover::before {
 #menu-icon {
   font-size: 2rem;
   display: none;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), color .2s ease;
+  cursor: pointer;
+  color: var(--header-text);
+}
+
+#menu-icon.open {
+  transform: rotate(90deg) scale(1.05);
+  color: var(--accent1);
 }
 
 section {
@@ -446,29 +454,49 @@ footer ul {
     position: absolute;
     top: 100%;
     margin-top: 1rem;
-    width: 100%;
-    padding: 1rem;
-    color: #f9f6ee;
-    display: none;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    padding: 0.5rem 1rem;
+    color: var(--header-text);
+    display: flex;
     flex-direction: column;
     text-align: center;
-    background: rgb(0, 0, 0, 0.8);
-    border-radius: 3rem;
-    display: none;
+    background: var(--header-bg);
+    border-radius: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height .38s cubic-bezier(.2,.9,.2,1), opacity .28s ease, transform .28s cubic-bezier(.2,.9,.2,1);
+    z-index: 999;
   }
   .nav-links li {
     margin-top: 1rem;
     padding: 1rem;
   }
   .nav-links.active {
-    display: block;
+    max-height: 420px; /* allow enough space for items */
+    opacity: 1;
+    transform: translateY(0);
   }
   header {
-    padding: 1rem 5rem;
-    gap: 8rem;
+    padding: 0.9rem 1.25rem;
+    gap: 0.75rem;
+    justify-content: space-between;
   }
   header .logo {
     font-size: 1.5rem;
+  }
+  /* ensure theme toggle is visible and near the menu icon */
+  .theme-toggle {
+    display: inline-flex;
+    order: 3;
+    margin-left: 0.25rem;
+    z-index: 1001;
+  }
+  #menu-icon {
+    order: 4;
+    z-index: 1001;
   }
   .about-container img {
     width: 80vw;

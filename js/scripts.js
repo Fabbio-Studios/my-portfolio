@@ -31,6 +31,16 @@ if (!isReducedMotion && !isTouchOrMobile && grid) {
 
 menuIcon.onclick = () => {
   navLinks.classList.toggle('active');
+  // toggle open class for animation and swap icon between bars and x
+  if (menuIcon.classList.contains('open')) {
+    menuIcon.classList.remove('open');
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+  } else {
+    menuIcon.classList.add('open');
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-xmark');
+  }
 }
 
 // Theme toggle: persist in localStorage and respect prefers-color-scheme
