@@ -32,3 +32,35 @@ if (!isReducedMotion && !isTouchOrMobile && grid) {
 menuIcon.onclick = () => {
   navLinks.classList.toggle('active');
 }
+
+// Theme toggle: persist in localStorage and respect prefers-color-scheme
+const themeToggle = document.getElementById('theme-toggle');
+const rootEl = document.documentElement;
+
+function applyTheme(isDark) {
+  if (isDark) {
+    rootEl.classList.add('dark-mode');
+    if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    rootEl.classList.remove('dark-mode');
+    if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// initialize theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  applyTheme(savedTheme === 'dark');
+} else {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = rootEl.classList.contains('dark-mode');
+    applyTheme(!isDark);
+  });
+}
