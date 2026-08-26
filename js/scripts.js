@@ -2,6 +2,48 @@ const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 const grid = document.querySelector('#grid');
 
+const browserLanguage = (navigator.language || navigator.languages?.[0] || 'pt-BR').toLowerCase();
+const shouldUseEnglish = browserLanguage.startsWith('en');
+const isPortugueseBrazil = !shouldUseEnglish;
+
+const translations = {
+  'nav-about': { en: 'About', pt: 'Sobre' },
+  'nav-experience': { en: 'Experience', pt: 'Experiência' },
+  'nav-projects': { en: 'Projects', pt: 'Projetos' },
+  'github-btn': { en: 'Visit GitHub', pt: 'Visitar GitHub' },
+  'about-hi': { en: "Hi, I'm", pt: 'Olá, eu sou' },
+  'role': { en: 'Front-End Developer', pt: 'Desenvolvedor Front-End' },
+  'cv-btn': { en: 'Download CV', pt: 'Baixar CV' },
+  'contact-btn': { en: 'Contact', pt: 'Contato' },
+  'exp-web': { en: 'Web Development', pt: 'Desenvolvimento Web' },
+  'exp-graphic': { en: 'Graphic Design', pt: 'Design Gráfico' },
+  'exp-uiux': { en: 'UI/UX Design', pt: 'UI/UX Design' },
+  'exp-social': { en: 'Social Media Manager', pt: 'Gestão de Mídias Sociais' },
+  'projects-title': { en: 'Recent Projects', pt: 'Projetos Recentes' },
+  'footer-about': { en: 'About', pt: 'Sobre' },
+  'footer-experience': { en: 'Experience', pt: 'Experiência' },
+  'footer-projects': { en: 'Projects', pt: 'Projetos' },
+  'footer-copy': { en: '© All rights reserved | Fábio Gutemberg', pt: '© Todos os direitos reservados | Fábio Gutemberg' }
+};
+
+function applyLanguage() {
+  const lang = shouldUseEnglish ? 'en-US' : 'pt-BR';
+  document.documentElement.lang = lang;
+
+  Object.entries(translations).forEach(([id, value]) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.textContent = shouldUseEnglish ? value.en : value.pt;
+    }
+  });
+
+  document.title = shouldUseEnglish
+    ? 'Fábio Gutemberg | Front-end Dev'
+    : 'Fábio Gutemberg | Desenvolvedor Front-end';
+}
+
+applyLanguage();
+
 const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isTouchOrMobile = window.matchMedia('(hover: none), (pointer: coarse), (max-width: 820px)').matches;
 

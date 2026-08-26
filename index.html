@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,18 +22,18 @@
     <header class="header">
         <a href="#" class="logo"><span>Gutemberg</span></a>
         <ul class="nav-links">
-            <li><a href="#about">About</a>
+            <li><a href="#about" id="nav-about">Sobre</a>
             </li>
 
-            <li><a href="#experience">Experience</a>
+            <li><a href="#experience" id="nav-experience">Experiência</a>
             
             </li>
-            <li><a href="#projects">Projects</a>
+            <li><a href="#projects" id="nav-projects">Projetos</a>
         </ul>
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro"><i class="fa-solid fa-moon"></i></button>
-        <a class="visit-btn" href="https://github.com/Fabbio-Studios" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+        <a class="visit-btn" id="github-btn" href="https://github.com/Fabbio-Studios" target="_blank" rel="noopener noreferrer">Visitar GitHub</a>
 
     </header>
 
@@ -42,13 +42,13 @@
             <img src="assets/img/profile.jpg" alt="">
             <div class="info-box">
                 <div class="text">
-                    <h3>Hi, I'm</h3>
+                    <h3 id="about-hi">Olá, eu sou</h3>
                     <h1>Gutemberg</h1>
-                    <span>Front-End Developer</span>
+                    <span id="role">Desenvolvedor Front-End</span>
                 </div>
                 <div class="btn-group">
-                    <a class="btn" href="https://drive.google.com/file/d/1IPZCykFQy4rK71xtMNBSZY7_b1X9D_TQ/view?usp=sharing" download target="_blank" rel="noopener noreferrer">Download CV</a>
-                    <a class="btn" href="mailto:oliveiragutemberg147@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
+                    <a class="btn" id="cv-btn" href="https://drive.google.com/file/d/1IPZCykFQy4rK71xtMNBSZY7_b1X9D_TQ/view?usp=sharing" download target="_blank" rel="noopener noreferrer">Baixar CV</a>
+                    <a class="btn" id="contact-btn" href="mailto:oliveiragutemberg147@gmail.com" target="_blank" rel="noopener noreferrer">Contato</a>
                 </div>
                 <div class="social">
                     <a href="https://www.instagram.com/fabbiogutemberg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -64,27 +64,27 @@
             <div class="grid">
                 <div class="grid-card">
                     <i class="fa-solid fa-code"></i>
-                    <span>Web Development</span>
-                    <h3>4 years</h3>
-                    <p>I work building landing pages and web systems. I have also participated in research and innovation projects in the field.</p>
+                    <span id="exp-web">Desenvolvimento Web</span>
+                    <h3>4 anos</h3>
+                    <p>Trabalho com a criação de landing pages e sistemas web, além de participar de projetos de pesquisa e inovação na área.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <span>Graphic Design</span>
-                    <h3>6 years</h3>
-                    <p>Specializing in social media content, logos, and visual identities. I create bold, unconventional, and unmistakable designs that turn ideas into memorable brands.</p>
+                    <span id="exp-graphic">Design Gráfico</span>
+                    <h3>6 anos</h3>
+                    <p>Especializado em conteúdo para redes sociais, logos e identidades visuais. Crio peças audaciosas, fora do comum e memoráveis, transformando ideias em marcas fortes.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-brands fa-figma"></i>
-                    <span>UI/UX Design</span>
-                    <h3>3 years</h3>
-                    <p>Experience in creating and redesigning digital interfaces. I build solutions focused on usability heuristics, a mobile-first approach, and intuitive, efficient user experiences.</p>
+                    <span id="exp-uiux">UI/UX Design</span>
+                    <h3>3 anos</h3>
+                    <p>Experiência na criação e redesign de interfaces digitais, com foco em heurísticas de usabilidade, abordagem mobile-first e experiências intuitivas e eficientes.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-solid fa-icons"></i>
-                    <span>Social Media Manager</span>
-                    <h3>2 years</h3>
-                    <p>I manage social media accounts, creating engaging content and strategies to grow audiences and enhance brand visibility.</p>
+                    <span id="exp-social">Gestão de Mídias Sociais</span>
+                    <h3>2 anos</h3>
+                    <p>Gerencio contas de redes sociais, criando conteúdos envolventes e estratégias para aumentar o alcance e fortalecer a presença da marca.</p>
                 </div>
             </div>
             <img src="assets/img/profile.jpg" alt="">
@@ -92,35 +92,35 @@
     </section>
 
     <section id="projects" class="projects">
-        <h2 class="section-title">Recent Projects</h2>
+        <h2 class="section-title" id="projects-title">Projetos Recentes</h2>
         <div class="projects-grid">
 
             <div class="project-card">
                 <img src="assets/img/Z.png" alt="">
                 <h3>Omega Ruby Kaizo Wiki</h3>
-                <p><strong>React</strong> + <strong>TypeScript</strong> + <strong>UI focused front-end</strong> applied in a documentation-driven wiki for ORK, combining clear navigation, structured content, and a modern, responsive experience for game guides.</p>
+                <p><strong>React</strong> + <strong>TypeScript</strong> + <strong>front-end focado em UI</strong> aplicado em uma wiki documental para o ORK, reunindo navegação clara, conteúdo estruturado e uma experiência moderna e responsiva para guias de jogo.</p>
                 <div class="btn-group">
-                    <a class="btn" href="https://fabbio-studios.github.io/OmegarubyKO_docs/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    <a class="btn" href="https://github.com/Fabbio-Studios/OmegarubyKO_docs" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                    <a class="btn" href="https://fabbio-studios.github.io/OmegarubyKO_docs/" target="_blank" rel="noopener noreferrer">Demonstração</a>
+                    <a class="btn" href="https://github.com/Fabbio-Studios/OmegarubyKO_docs" target="_blank" rel="noopener noreferrer">Repositório</a>
                 </div>
             </div>
 
             <div class="project-card">
                 <img src="assets/img/Y.jpg" alt="">
                 <h3>Otaku Estudante</h3>
-                <p>Front-end built with <strong>HTML, CSS, JS</strong>, <strong>Python</strong>, and <strong>responsive UI patterns</strong> to create a community-driven platform for anime reviews, recommendations, and student-focused content discovery.</p>
+                <p>Front-end construído com <strong>HTML, CSS e JS</strong>, <strong>Python</strong> e <strong>padrões responsivos de interface</strong> para criar uma plataforma colaborativa de resenhas e recomendações de anime, pensada para a comunidade estudantil.</p>
                 <div class="btn-group">
-                    <a class="btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                    <a class="btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">Repositório</a>
                 </div>
             </div>
 
             <div class="project-card">
                 <img src="assets/img/FAB.PNG" alt="">
                 <h3>FAB website Rebranding</h3>
-                <p>UX/UI redesign focused on <strong>Bootstrap</strong>, <strong>HTML, JS, CSS</strong>, and polished <strong>front-end interaction design</strong> to improve usability, visual clarity, and the digital experience of a public service recruitment flow.</p>
+                <p>Redesign de UX/UI focado em <strong>Bootstrap</strong>, <strong>HTML, JS e CSS</strong>, além de uma <strong>interação front-end refinada</strong> para melhorar usabilidade, clareza visual e a experiência digital de um fluxo de recrutamento de serviço público.</p>
                 <div class="btn-group">
-                    <a class="btn" href="https://fabbio-studios.github.io/FAB/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    <a class="btn" href="https://github.com/Fabbio-Studios/FAB" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                    <a class="btn" href="https://fabbio-studios.github.io/FAB/" target="_blank" rel="noopener noreferrer">Demonstração</a>
+                    <a class="btn" href="https://github.com/Fabbio-Studios/FAB" target="_blank" rel="noopener noreferrer">Repositório</a>
                 </div>
             </div>
 
@@ -130,16 +130,16 @@
     <footer>
         <ul>
             <li>
-                <a href="#about">About</a>
+                <a href="#about" id="footer-about">Sobre</a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" id="footer-experience">Experiência</a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" id="footer-projects">Projetos</a>
             </li>
         </ul>
-        <p class="copyright">© All rights reserved | Fábio Gutemberg</p>
+        <p class="copyright" id="footer-copy">© Todos os direitos reservados | Fábio Gutemberg</p>
     </footer>
 
     <script src="js/scripts.js"></script>

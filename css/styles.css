@@ -348,6 +348,19 @@ section {
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  min-height: 100%;
+}
+.project-card .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 0.75rem;
+}
+.project-card .btn {
+  flex: 1 1 150px;
+  max-width: 220px;
+  min-width: 0;
 }
 .project-card:hover {
   background-color: var(--card-hover-bg);
